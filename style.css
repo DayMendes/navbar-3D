@@ -1,0 +1,60 @@
+body {
+  background: #000;
+}
+.cenario {
+  width: 80px;
+  height: 75px;
+  margin-left: 30px;
+}
+
+img {
+  display: block;
+  width: 40%;
+  margin: 20px 35px 0 25px;
+}
+p {
+  text-align: center;
+  color: #393e46;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  /*certifique-se de que parece um cubo*/
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  /*determina que a transformação começará do canto superior esquerdo*/
+  transform-origin: 0 0;
+}
+
+.cenario:hover .box {
+  transform: rotateY(-90deg);
+  cursor: pointer;
+}
+
+.frontal {
+  /*absoluto para que todos os lados fiquem um em cima do outro*/
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  transform: rotateY(0deg);
+  background-color: #393e46;
+}
+
+.direita {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 75px;
+  transform: rotateY(90deg);
+  transform-origin: 0 0;
+  /*à esquerda é necessário animá-lo como um cubo*/
+  left: 80px;
+  float: left;
+  background-color: #fcda05;
+}
